@@ -3,6 +3,7 @@ package service;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Hashtable;
 
 import model.City;
 
@@ -50,6 +51,27 @@ public class MainService {
 				)));
 		System.out.println("-----------------Iegut visus kurzems pilsetas-----------------");
 		System.out.println(myHashMap2.get("Kurzeme"));
+		System.out.println("-----------------Iegut visus datus ar atslegam-----------------");
+		System.out.println(myHashMap2.entrySet());
+		
+		
+		
+		System.out.println("----------------------------------");
+		System.out.println("---------------HASHTABALE-------------------");
+		System.out.println();
+		Hashtable<String, City> myHashTable = new Hashtable<>();
+		myHashTable.put("Daugavpils", new City("Daugavpils", 72.37f, 80627, "Elksniņš"));
+		myHashTable.put("Kuldiga", new City("Kuldiga", 13.2f, 9940, "Astaševska"));
+		myHashTable.put("Jelgava", new City("Jelgava", 60.56f, 54701, "Ravins"));
+		System.out.println("-----------------Iegut-----------------");
+		System.out.println(myHashTable.get("Kuldiga"));
+		System.out.println(myHashTable.get("Jelgava"));
+		System.out.println("-----------------Izdzest-----------------");
+		myHashMap.remove("Kuldiga");
+		System.out.println(myHashMap.get("Kuldiga"));
+		
+		myHashTable.put("Liepaja", null);
+		
 		
 		
 	}
